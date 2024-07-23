@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+  }
+
+ 
+  
+  .header {
+    overflow: hidden;
+    background-color: #2F3C7E; /* Dark color for header background */
+    padding: 20px 10px;
+    margin: -8px -8px 10px -8px;
+  }
+  
+  .header a {
+    float: left;
+    color:  #ffffff; /* Light beige */
+    text-align: center;
+    padding: 7px;
+    margin-left: 5%;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: color 0.4s ease, background-color 0.4s ease;
+  }
+  
+  .header a.logo {
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 2%;
+  }
+  
+  .header a.logo:hover {
+    color: #ffffff; /* Light beige */
+  }
+  
+  .header a.active {
+    background-color: #ffffff; /* Terracotta red */
+    color: #2F3C7E; /* Light beige */
+    width: 100%;
+  }
+  
+  .header a.active:hover {
+    background-color: #070707; /* Light beige */
+    color: #ffffff; /* Dark color for contrast */
+  }
+  
+  .header-center {
+    margin-left: 35%;
+  }
+  
+  .header-right {
+    margin-left: 85%;
+    margin-top: -10%;
+  }
+  
+  .header-right1 {
+    margin-left: 90%;
+    margin-top: -10%;
+  }
+  
+  .link {
+    margin: -0.5%;
+    padding: 0%;
+  }
+  
+  .header a:hover {
+    color: #858585; /* Muted teal */
+  }
+  
+  .loginitseems {
+    color: #333; /* Dark color for contrast */
+  }
+  
+
+  

@@ -1,0 +1,68 @@
+/* SignUpPage.css */
+
+/* Styles for the outermost div */
+.back12 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image:
+            linear-gradient(45deg,
+                rgba(199, 199, 199, 0.25),
+                rgba(74, 74, 74, 0.25)), 
+                  url(
+'https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/65c3dc64ee9d990774581725_VMsPbgJoOf1a1j2rMIwl9nSuDVwduHRsz_i6ndLB9tNBkl7G96pn2SQU6A0I_sGTWqYiZhefReoHreVTOGHD2PGcuQxiKf1bNbobDzGMNTcJW4wBEY3cZNXeO7gjb5t9gaiBFJVdFmZ3Lvi4xXeTf4s.png');
+height: 100vh;
+background-size: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: -8px;
+  }
+  
+  /* Styles for the container div */
+  .container11 {
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  /* Styles for the form */
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Styles for form groups */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Styles for labels */
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  /* Styles for input fields */
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Styles for the submit button */
+  .form-group button {
+    background-color: #2F3C7E;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for the submit button */
+  .form-group button:hover {
+    background-color: #000000;
+    color: #fff;
+  }
+  

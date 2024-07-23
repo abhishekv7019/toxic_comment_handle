@@ -1,0 +1,73 @@
+body{
+    background-color: rgb(233, 233, 233);
+}
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .post-title-heading-main{
+    font-size:  50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2F3C7E;
+    margin-left: 45%;
+  }
+  
+  .post-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #fff;
+  }
+  
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .post-title {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  .username {
+    color: #555;
+  }
+  
+  .post-text {
+    font-size: 1.2em; /* Increase text size */
+    font-weight: bold; /* Make text bold */
+    margin: 8px 0;
+  }
+  
+  .post-attachment {
+    max-width: 100%;
+    height: auto;
+    margin: 8px 0;
+  }
+  
+  .post-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .likes, .dislikes {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 4px;
+    font-size: 1.2em; /* Increase icon size */
+  }
+  
+  .count {
+    font-weight: bold; /* Make text bold */
+    font-size: 1.1em; /* Increase text size */
+  }
+  
