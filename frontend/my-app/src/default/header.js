@@ -37,9 +37,7 @@ function Navbar() {
     <Link className='link' to="/postit">
     <a href="#">Post</a>
     </Link>
-    <Link className='link' to="/lists">
-    <a href="#">Profile</a>
-    </Link>
+    
     
   </div>
   {isLoggedIn  ? 

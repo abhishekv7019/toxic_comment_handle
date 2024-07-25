@@ -1,25 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './default/header';
-import './css/postit.css'
+import './css/postit.css';
+import {useNavigate} from 'react-router-dom';
+import { getUsername } from './auth/login';
 import Footer from './default/footer';
 
 const PostForm = () => {
   const [postText, setPostText] = useState('');
-  const [photo, setPhoto] = useState(null);
-
+  const [file, setFile] = useState(null);
+  const navigate = useNavigate();
   const handleTextChange = (event) => {
     setPostText(event.target.value);
   };
-
+  
+  useEffect(() => {
+    const username = getUsername();
+    if (!!username) {
+      // do noting
+    } else {
+      navigate(`/`);
+    }
+  }, [navigate]);
+  
+  
   const handlePhotoChange = (event) => {
-    setPhoto(event.target.files[0]);
+    setFile(event.target.files[0]);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic here
-    console.log("Post Text:", postText);
-    console.log("Photo:", photo);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData();
+    formData.append('postText', postText); // Add postText to the form data
+    formData.append('image', file); 
+    const username = getUsername();
+    formData.append('username', username);
+
+    try {
+      const response = await fetch('http://localhost:5000/upload', {
+        method: 'POST',
+        body: formData,
+      });
+      const result = await response.json();
+      setPostText('');
+      setFile(null);
+      navigate('/home');
+      console.log(result);
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (
@@ -50,7 +79,7 @@ const PostForm = () => {
           <button type="submit" className="unique-submit-button">Post</button>
         </form>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

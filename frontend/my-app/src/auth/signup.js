@@ -48,22 +48,33 @@ function SignUpPage() {
   }
   
      //data insertion
-  function insertArticle() {
-  
-    fetch('http://localhost:5000/app/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ username, password }),
-    })
-    .then(response => response.json())
-    .then(data => {
-      setresult(data);
-    })
-    .catch(error => console.error('Error:', error));
-  }
-    
+     const insertArticle = () => {
+      fetch('http://localhost:5000/app/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      })
+      .then(response => {
+        if (!response.ok) {
+          return response.json().then(data => {
+            throw new Error(data.error || 'An error occurred');
+          });
+        }
+        return response.json();
+      })
+      .then(data => {
+        setresult(data.message);
+        if(data.message==="User registered successfully"){
+          navigate('/')
+        }
+      })
+      .catch(error => {
+        setresult(error.message);
+        console.error('Error:', error);
+      });
+    };
   return (
     <div className="back12">
       <div className="container11">

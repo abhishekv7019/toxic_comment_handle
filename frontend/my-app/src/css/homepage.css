@@ -1,73 +1,97 @@
-body{
-    background-color: rgb(233, 233, 233);
-}
-.post-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-  .post-title-heading-main{
-    font-size:  50px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #2F3C7E;
-    margin-left: 45%;
-  }
-  
-  .post-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
-    background-color: #fff;
-  }
-  
-  .post-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-  }
-  
-  .post-title {
-    font-size: 1.2em;
-    margin: 0;
-  }
-  
-  .username {
-    color: #555;
-  }
-  
-  .post-text {
-    font-size: 1.2em; /* Increase text size */
-    font-weight: bold; /* Make text bold */
-    margin: 8px 0;
-  }
-  
-  .post-attachment {
-    max-width: 100%;
-    height: auto;
-    margin: 8px 0;
-  }
-  
-  .post-stats {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1em;
-    color: #666;
-  }
-  
-  .likes, .dislikes {
-    display: flex;
-    align-items: center;
-  }
-  
-  .icon {
-    margin-right: 4px;
-    font-size: 1.2em; /* Increase icon size */
-  }
-  
-  .count {
-    font-weight: bold; /* Make text bold */
-    font-size: 1.1em; /* Increase text size */
-  }
-  
+body {
+  background-color: rgb(233, 233, 233);
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font to the entire body */
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.post-title-heading-main {
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  color: #2F3C7E;
+  margin: 20px;
+}
+
+.post-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #fff;
+  width: 500px;
+}
+
+.defaultPhoto {
+  margin: 10px;
+}
+
+.post-header {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: baseline;
+}
+
+.post-title {
+  font-size: 1.2em;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
+
+.username {
+  color: #555;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
+
+.post-text {
+  font-size: 1.2em; /* Increase text size */
+  font-weight: bold; /* Make text bold */
+  margin: 8px 0;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
+
+.post-attachment-header {
+  display: flex;
+  justify-content: center;
+}
+
+.post-attachment {
+  max-width: 100%;
+  height: auto;
+  width: fit-content;
+  margin: 4px 0; /* Reduce margin */
+  max-height: 500px; /* Reduce size */
+  min-height: 300px; /* Reduce size */
+  object-fit: contain; /* Ensure image is contained without distortion */
+}
+
+.post-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+  color: #666;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
+
+.likes, .dislikes {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
+
+.icon {
+  margin-right: 10px; /* Increase space between icon and text */
+  font-size: 1.2em; /* Increase icon size */
+}
+
+.count {
+  font-weight: bold; /* Make text bold */
+  font-size: 1.1em; /* Increase text size */
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
